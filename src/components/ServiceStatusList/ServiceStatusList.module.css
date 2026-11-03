@@ -1,0 +1,15 @@
+.root { margin: 0; padding: 0; list-style: none; font-family: var(--ga-font-sans); color: var(--ga-ink); display: grid; gap: 0; border: 1px solid var(--ga-border); border-radius: var(--ga-radius-lg); background: var(--ga-surface); overflow: hidden; min-width: 0; }
+.item { display: flex; align-items: center; gap: var(--ga-space-3); padding: var(--ga-space-4) var(--ga-space-6); border-bottom: 1px solid var(--ga-border); min-width: 0; }
+.item:last-child { border-bottom: 0; }
+.dot { width: 10px; height: 10px; flex-shrink: 0; border-radius: 50%; }
+.dotAvailable { background: var(--ga-success); }
+.dotReview { background: var(--ga-warning); }
+.dotSoon { background: var(--ga-faint); }
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.name { font-weight: 700; }
+.description { color: var(--ga-muted); font-size: var(--ga-text-body-sm); }
+.status { flex-shrink: 0; color: var(--ga-muted); font-size: var(--ga-text-body-sm); font-weight: 600; white-space: nowrap; }
+@media (max-width: 480px) {
+  .item { flex-wrap: wrap; }
+  .status { margin-left: 22px; }
+}

@@ -1,0 +1,63 @@
+/* ============================================================
+   Gran Azul DS · Estilos base
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ga-bg);
+  color: var(--ga-muted);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--ga-ink);
+  font-family: var(--ga-font-display);
+  font-weight: 700;
+  letter-spacing: var(--ga-tracking-tight);
+  line-height: 1.08;
+}
+
+h1 { font-size: var(--ga-text-h1); letter-spacing: var(--ga-tracking-tighter); }
+h2 { font-size: var(--ga-text-h2); }
+h3 { font-size: var(--ga-text-h3); }
+h4 { font-size: var(--ga-text-h4); }
+
+p { margin: 0; }
+
+a {
+  color: var(--ga-accent-hover);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+button { font-family: inherit; }
+
+::selection {
+  background: var(--ga-accent);
+  color: var(--ga-on-accent);
+}
+
+/* Scrollbar sutil a juego */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--ga-border-strong);
+  border-radius: var(--ga-radius-pill);
+  border: 2px solid var(--ga-bg);
+}

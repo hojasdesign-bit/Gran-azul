@@ -1,0 +1,29 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border: 1px solid transparent;
+  border-radius: var(--ga-radius-md);
+  background: transparent;
+  color: var(--ga-muted);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.btn svg { display: block; }
+.btn:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.sm { width: 32px; height: 32px; }
+.md { width: 40px; height: 40px; }
+.lg { width: 44px; height: 44px; }
+
+.ghost:hover:not(:disabled) { background: var(--ga-accent-softer); color: var(--ga-ink); }
+.surface { background: var(--ga-surface-raised); color: var(--ga-ink-2); }
+.surface:hover:not(:disabled) { background: var(--ga-surface-overlay); }
+.outline { border-color: var(--ga-border); background: var(--ga-surface); color: var(--ga-ink-2); }
+.outline:hover:not(:disabled) { border-color: var(--ga-border-strong); }
+.accent { background: var(--ga-accent); color: var(--ga-on-accent); }
+.accent:hover:not(:disabled) { background: var(--ga-accent-hover); }
+.danger { color: var(--ga-danger); }
+.danger:hover:not(:disabled) { background: rgba(239, 68, 68, 0.12); color: var(--ga-danger); }

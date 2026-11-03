@@ -1,0 +1,39 @@
+.wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ga-space-3);
+  font-family: var(--ga-font-sans);
+}
+.gauge { position: relative; flex: none; }
+.svg { display: block; transform: rotate(-90deg); }
+.track { fill: none; stroke: var(--ga-surface-overlay); stroke-width: 9; }
+.arc {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 9;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease;
+}
+.high { color: var(--ga-success); }
+.mid { color: var(--ga-warning); }
+.low { color: var(--ga-danger); }
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.value { font-weight: 900; line-height: 1; color: var(--ga-ink); font-variant-numeric: tabular-nums; }
+.caption { font-size: var(--ga-text-micro); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ga-faint); }
+.label {
+  padding: 5px 12px;
+  border-radius: var(--ga-radius-pill);
+  background: var(--ga-accent-soft);
+  color: var(--ga-accent-hover);
+  font-size: var(--ga-text-caption);
+  font-weight: 700;
+}

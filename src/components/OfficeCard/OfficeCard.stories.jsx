@@ -1,0 +1,10 @@
+import { OfficeCard } from './OfficeCard.jsx';
+export default { title: 'Gran Azul/OfficeCard', component: OfficeCard };
+export const Miami = { args: { city: 'Miami', state: 'FL' } };
+export const Orlando = { args: { city: 'Orlando', state: 'FL' } };
+export const Tampa = { args: { city: 'Tampa', state: 'FL' } };
+export const Houston = { args: { city: 'Houston', state: 'TX' } };
+export const Dallas = { args: { city: 'Dallas', state: 'TX' } };
+export const Charlotte = { args: { city: 'Charlotte', state: 'NC' } };
+export const LasVegas = { args: { city: 'Las Vegas', state: 'NV' } };
+export const Chicago = { args: { city: 'Chicago', state: 'IL' } };

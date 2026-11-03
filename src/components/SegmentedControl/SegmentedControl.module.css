@@ -1,0 +1,48 @@
+/* Medidas portadas desde peetoo (v2.4, fila de filtros igualada al
+   CascadeField): botones a 42px y radio 12px.
+   Patrón de toggle del DS (igual que el orden de QuoteOptions): el
+   outline agrupa las dos opciones en un solo contenedor. El activo es
+   un botón sólido; el inactivo solo se ve como texto, sin borde ni
+   fondo propio. */
+.root {
+  display: inline-flex;
+  gap: 4px;
+  width: 100%;
+  padding: 4px;
+  border: 1px solid var(--ga-border-strong);
+  border-radius: var(--ga-radius-lg);
+  background: transparent;
+  font-family: var(--ga-font-sans);
+  box-sizing: border-box;
+}
+
+.seg {
+  flex: 1;
+  height: 42px;
+  padding: 0 var(--ga-space-4);
+  background: transparent;
+  border: 0;
+  border-radius: var(--ga-radius-tile);
+  color: var(--ga-muted);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.seg:hover { color: var(--ga-ink); }
+.seg:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+
+.active {
+  background: var(--ga-accent);
+  color: var(--ga-on-accent);
+}
+
+.active:hover { color: var(--ga-on-accent); }
+
+.activeAccent {
+  background: var(--ga-accent);
+  color: var(--ga-on-accent);
+}

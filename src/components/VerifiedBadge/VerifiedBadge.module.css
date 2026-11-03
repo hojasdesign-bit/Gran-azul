@@ -1,0 +1,12 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ga-font-sans);
+}
+.icon { display: inline-flex; flex: none; }
+.standard { color: var(--ga-accent-hover); }
+.premium { color: var(--ga-warning); }
+.success { color: var(--ga-success); }
+.label { font-size: var(--ga-text-caption); font-weight: 700; color: var(--ga-ink-2); }
+.premium .label { color: var(--ga-warning); }

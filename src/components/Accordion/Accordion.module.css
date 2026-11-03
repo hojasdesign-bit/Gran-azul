@@ -1,0 +1,64 @@
+.accordion {
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-md);
+  background: var(--ga-surface);
+  overflow: hidden;
+  font-family: var(--ga-font-sans);
+}
+
+.item + .item { border-top: 1px solid var(--ga-border); }
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ga-space-4);
+  padding: var(--ga-space-4) var(--ga-space-5);
+  background: none;
+  border: 0;
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.18s ease;
+}
+.header:hover { background: var(--ga-accent-softer); }
+.header:focus-visible { outline: none; box-shadow: inset var(--ga-focus-ring); }
+
+.title {
+  font-size: var(--ga-text-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.18s ease;
+}
+.header:hover .title { color: var(--ga-accent-hover); }
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--ga-muted);
+  transition: transform 0.28s ease, color 0.18s ease;
+}
+.open .chevron { transform: rotate(180deg); color: var(--ga-accent); }
+
+/* Animación de plegado con la técnica 0fr → 1fr */
+.collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.3s ease, opacity 0.22s ease;
+}
+.open .collapse { grid-template-rows: 1fr; opacity: 1; }
+
+.collapseInner { overflow: hidden; min-height: 0; }
+
+.content {
+  padding: 0 var(--ga-space-5) var(--ga-space-5);
+  color: var(--ga-muted);
+  font-size: var(--ga-text-body-sm);
+  line-height: 1.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapse, .chevron { transition: none; }
+}

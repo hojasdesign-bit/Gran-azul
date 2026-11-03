@@ -1,0 +1,43 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ga-space-4);
+  font-family: var(--ga-font-sans);
+  color: var(--ga-ink);
+}
+
+.center { align-items: center; text-align: center; }
+.left { align-items: flex-start; text-align: left; }
+
+.eyebrow {
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  color: var(--ga-accent-bright);
+}
+
+.title {
+  color: inherit; /* gana al color de tinta global de base.css */
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.display {
+  font-size: var(--ga-text-display);   /* 60px medidos */
+  line-height: var(--ga-leading-display);
+}
+
+.h1 {
+  font-size: var(--ga-text-h1);        /* 48px medidos */
+  line-height: var(--ga-leading-heading);
+}
+
+.text {
+  margin: 0;
+  max-width: 640px;
+  font-size: var(--ga-text-body-lg);   /* 18px medidos */
+  font-weight: 500;
+  line-height: var(--ga-leading-body);
+  color: var(--ga-muted);
+}

@@ -1,0 +1,40 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: var(--ga-input-bg);
+  border: 1px solid var(--ga-border-strong);
+  border-radius: var(--ga-radius-pill);
+  font-family: var(--ga-font-sans);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ga-ink);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn:hover:not(:disabled) { background: var(--ga-accent-soft); }
+.btn:disabled { color: var(--ga-faint); cursor: not-allowed; }
+.btn:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+
+.sm .btn { width: 26px; height: 26px; }
+
+.value {
+  min-width: 34px;
+  text-align: center;
+  font-size: var(--ga-text-body);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ga-ink);
+}

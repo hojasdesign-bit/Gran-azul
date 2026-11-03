@@ -1,0 +1,14 @@
+.wrap { width: 100%; max-width: 440px; font-family: var(--ga-font-sans); }
+.head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--ga-space-2); }
+.label { font-size: var(--ga-text-body-sm); font-weight: 600; color: var(--ga-ink-2); }
+.headValue { font-size: var(--ga-text-body-sm); font-weight: 800; color: var(--ga-ink); font-variant-numeric: tabular-nums; }
+.bars { display: flex; flex-direction: column; gap: 6px; }
+.track { height: 8px; border-radius: var(--ga-radius-pill); background: var(--ga-surface-overlay); overflow: hidden; }
+.fill { height: 100%; border-radius: var(--ga-radius-pill); transition: width 0.5s ease; }
+.valueFill { background: var(--ga-accent); }
+.benchFill { background: var(--ga-faint); opacity: 0.55; }
+.legend { display: flex; gap: var(--ga-space-5); margin-top: var(--ga-space-2); }
+.legendItem { display: inline-flex; align-items: center; gap: 6px; font-size: var(--ga-text-caption); color: var(--ga-muted); font-variant-numeric: tabular-nums; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.valueDot { background: var(--ga-accent); }
+.benchDot { background: var(--ga-faint); }

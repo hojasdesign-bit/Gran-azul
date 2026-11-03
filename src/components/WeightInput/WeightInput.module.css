@@ -1,0 +1,14 @@
+.root { font-family: var(--ga-font-sans); color: var(--ga-ink); display: grid; gap: var(--ga-space-2); min-width: 0; }
+.label { font-size: var(--ga-text-body-sm); font-weight: 600; color: var(--ga-muted); }
+.controls { display: flex; gap: var(--ga-space-2); align-items: stretch; flex-wrap: wrap; min-width: 0; }
+.row { flex: 1 1 160px; min-width: 0; display: flex; align-items: center; gap: var(--ga-space-2); background: var(--ga-input-bg); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-lg); padding: 4px; }
+.btn { width: 40px; height: 40px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 10px; background: var(--ga-accent-soft); color: var(--ga-brand); font-size: 20px; font-weight: 700; line-height: 1; cursor: pointer; }
+.input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ga-ink); font-size: var(--ga-text-body); font-weight: 700; text-align: center; outline: none; }
+/* Sin las flechas nativas del campo numérico: el stepper propio (−/+) es el único control. */
+.input::-webkit-outer-spin-button, .input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+/* La unidad usa el SegmentedControl del DS (outline que agrupa lb/kg,
+   activo sólido, inactivo solo texto); ya no tiene botones propios. */
+@media (max-width: 480px) {
+  .btn { width: 36px; height: 36px; }
+}

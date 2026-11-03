@@ -1,0 +1,6 @@
+import { ServiceCard } from './ServiceCard.jsx';
+export default { title: 'Gran Azul/ServiceCard', component: ServiceCard };
+export const EnviarACuba = { args: { number: '01', title: 'Enviar a Cuba', description: 'Haz llegar lo que más importa de la forma más fácil y segura.', items: ['Casillero virtual', 'Puerta a puerta', 'Oficinas Gran Azul', 'Carga comercial'], ctaLabel: 'Ver opciones', featured: true } };
+export const ComprarParaCuba = { args: { number: '02', title: 'Comprar para Cuba', description: 'Productos y soluciones para tu familia.', items: ['Combos familiares', 'Alimentos y bebidas', 'Electrodomésticos', 'Motos y vehículos', 'Ofertas especiales'], ctaLabel: 'Ver productos' } };
+export const TramitesLegales = { args: { number: '03', title: 'Trámites legales', description: 'Gestiona tus documentos desde cualquier lugar.', items: ['Documentos', 'Legalizaciones', 'Poderes y autorizaciones', 'Gestiones internacionales'], ctaLabel: 'Conocer trámites' } };
+export const ViajarACuba = { args: { number: '04', title: 'Viajar a Cuba', description: 'Vuelos, hoteles y experiencias para volver a lo que importa.', items: ['Vuelos', 'Hoteles', 'Traslados', 'Experiencias'], ctaLabel: 'Ver viajes' } };

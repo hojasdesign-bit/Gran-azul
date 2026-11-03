@@ -1,0 +1,76 @@
+/* Popover — panel flotante por clic, sin scrim modal. */
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.trigger {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.panel {
+  position: absolute;
+  z-index: 10;
+  width: 300px;
+  max-width: calc(100vw - 32px);
+  padding: var(--ga-space-4);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  background: var(--ga-surface);
+  color: var(--ga-ink-2);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  line-height: 1.5;
+  box-shadow: var(--ga-shadow-lg);
+}
+
+.bottom {
+  top: calc(100% + 10px);
+  left: 0;
+}
+
+.top {
+  bottom: calc(100% + 10px);
+  left: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ga-space-3);
+  margin-bottom: var(--ga-space-3);
+}
+
+.title {
+  font-weight: 700;
+  color: var(--ga-ink);
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ga-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.close:hover {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  color: var(--ga-ink);
+}
+.close:focus-visible {
+  outline: none;
+  box-shadow: var(--ga-focus-ring);
+}
+
+.body {
+  display: block;
+}
+.body p { margin: 0; }

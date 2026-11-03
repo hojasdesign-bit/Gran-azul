@@ -1,0 +1,49 @@
+.panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--ga-space-16) var(--ga-space-6);
+  background-color: #101010; /* panel deliberadamente oscuro en ambos temas */
+  background-image:
+    var(--ga-gradient-hero),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 44px 44px, 44px 44px;
+  border: 1px solid var(--ga-border-accent);
+  border-radius: var(--ga-radius-2xl);
+  color: #ffffff;
+  font-family: var(--ga-font-sans);
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ga-space-4);
+}
+
+/* El panel es oscuro en ambos temas: los títulos no pueden heredar el
+   color tinta global de base.css, y ningún botón dentro puede usar tinta
+   pensada para fondo claro. */
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4 {
+  color: inherit;
+}
+
+.panel button {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.panel button:hover:not(:disabled) {
+  color: #ffffff;
+  border-color: #ffffff;
+}

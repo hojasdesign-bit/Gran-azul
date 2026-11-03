@@ -1,0 +1,8 @@
+.root { background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: var(--ga-space-6); color: var(--ga-ink); font-family: var(--ga-font-sans); display: grid; gap: var(--ga-space-4); max-width: 420px; width: 100%; min-width: 0; }
+.title { margin: 0; font-size: var(--ga-text-h3); }
+/* El método usa el SegmentedControl del DS (outline que agrupa ambas
+   opciones, activo sólido, inactivo solo texto); ya no tiene botones
+   propios. */
+.result { margin: 0; color: var(--ga-muted); }
+.result strong { color: var(--ga-ink); font-size: var(--ga-text-h3); }
+.demo { margin: 0; padding: 10px 12px; border-radius: var(--ga-radius-md); background: var(--ga-accent-soft); color: var(--ga-muted); font-size: var(--ga-text-body-sm); }

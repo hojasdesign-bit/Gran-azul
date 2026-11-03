@@ -1,0 +1,52 @@
+/* Link — enlace del DS. */
+.link {
+  font-family: var(--ga-font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  text-underline-offset: 3px;
+}
+.link:focus-visible {
+  outline: none;
+  box-shadow: var(--ga-focus-ring);
+  border-radius: var(--ga-radius-xs);
+}
+
+.accent {
+  color: var(--ga-accent-bright);
+}
+.accent:hover {
+  color: var(--ga-accent-hover);
+}
+
+.muted {
+  color: var(--ga-muted);
+}
+.muted:hover {
+  color: var(--ga-ink);
+}
+
+.inherit {
+  color: inherit;
+}
+
+.underlineHover {
+  text-decoration: none;
+}
+.underlineHover:hover {
+  text-decoration: underline;
+}
+
+.underlineAlways {
+  text-decoration: underline;
+}
+
+.underlineNone,
+.underlineNone:hover {
+  text-decoration: none;
+}
+
+.external {
+  display: inline-block;
+  margin-left: 3px;
+  vertical-align: -1px;
+}

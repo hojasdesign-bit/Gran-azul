@@ -1,0 +1,290 @@
+/* Gran Azul DS · tokens --ga-* · Claro por defecto, oscuro disponible · DM Sans · Marca #0075A7, CTA #0F6FC4, cian #13C1DF, noche #071D2F/#0A2A45, palido #F4F8FB */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&');
+
+:root,
+[data-theme='claro'] {
+  /* ---- Tipografía ---- */
+  --ga-font-display: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ga-font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ga-font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --ga-text-display-xl: 4.875rem; /* 78 · H1 de la home */
+  --ga-text-display: 48px;     /* 60 · H1 connect / H2 */
+  --ga-text-h1: 40px;             /* 48 · H2 / titular del blog */
+  --ga-text-h2: 28px;           /* 40 */
+  --ga-text-h3: 24px;             /* 32 */
+  --ga-text-h4: 1.25rem;          /* 20 */
+  --ga-text-amount: 1.75rem;      /* 28 · monto "usted paga" */
+  --ga-text-amount-sm: 1.125rem;  /* 18 · monto "usted recibe" */
+  --ga-text-body-lg: 1.125rem;    /* 18 · monto "usted recibe" */
+  --ga-text-body: 1rem;           /* 16 */
+  --ga-text-body-sm: 0.875rem;    /* 14 */
+  --ga-text-caption: 0.75rem;     /* 12 */
+  --ga-text-micro: 0.6875rem;     /* 11 */
+
+  --ga-tracking-tight: -0.02em;
+  --ga-tracking-tighter: -0.035em;
+
+  /* ---- Alturas de línea (medidas) ---- */
+  --ga-leading-display: 1.15;
+  --ga-leading-heading: 1.25;
+  --ga-leading-body: 1.55;
+
+  /* ---- Espaciado (base 8) ---- */
+  --ga-space-1: 4px;
+  --ga-space-2: 8px;
+  --ga-space-3: 12px;
+  --ga-space-4: 16px;
+  --ga-space-5: 20px;
+  --ga-space-6: 24px;
+  --ga-space-8: 32px;
+  --ga-space-10: 40px;
+  --ga-space-12: 48px;
+  --ga-space-16: 64px;
+  --ga-space-24: 96px;
+  --ga-space-32: 128px;
+
+  /* ---- Superficies · tema oscuro (medidas) ---- */
+  --ga-bg: #101010;          /* lienzo de página */
+  --ga-bg-soft: #141414;
+  --ga-surface: #181818;     /* tarjetas y widget */
+  --ga-surface-2: #1d1d1d;
+  --ga-surface-3: #202020;
+  --ga-surface-raised: #1d1d1d; /* casillas y fondos elevados (chats, paneles, tracks) */
+  --ga-surface-overlay: #26262b; /* pista de anillos y rellenos base */
+  --ga-input-bg: #202020;    /* campos */
+  --ga-overlay: #120c26;
+  --ga-ink: #ffffff;
+  --ga-ink-2: #f5f5f5;
+  --ga-muted: #c5c5c5;       /* texto secundario de página */
+  --ga-faint: #9f9f9f;       /* texto sutil */
+  --ga-label: #b2b2b2;       /* etiquetas dentro del widget */
+
+  /* ---- Acento · escala de marca medida ---- */
+  --ga-accent: #0F6FC4;
+  --ga-accent-hover: #2E8FE8;
+  --ga-accent-active: #084F85;
+  --ga-accent-deep: #071D2F;
+  --ga-accent-mid: #0F6FC4;
+  --ga-accent-bright: #13C1DF;
+  --ga-accent-soft: rgba(15, 111, 196, 0.12);
+  --ga-accent-softer: rgba(15, 111, 196, 0.06);
+  --ga-accent-pale: #DCEBF7;
+  --ga-accent-tint: #7FB8E8;
+  --ga-pale: #DCEBF7;
+  --ga-pale-ink: #071D2F;
+  --ga-on-accent: #ffffff;
+
+  /* ---- Paneles del widget (selectores, menú de cuenta) ---- */
+  --ga-panel-bg: #101010;
+  --ga-row-bg: #202020;
+  --ga-check-bg: #ffffff;
+  --ga-check-ink: #101010;
+
+  /* ---- Tarjetas de contenido (páginas) ---- */
+  --ga-card-tint: rgba(15, 111, 196, 0.1);       /* tinte violeta translúcido */
+  --ga-card-neutral: rgba(255, 255, 255, 0.06);
+  --ga-surface-btn: rgba(255, 255, 255, 0.06); /* botón secundario XL */
+  --ga-gradient-feature: radial-gradient(130% 150% at 18% -10%, #2E8FE8 0%, #0F6FC4 38%, #071D2F 78%, #071D2F 100%);
+
+  /* ---- Insignia "popular" del widget ---- */
+  --ga-popular-bg: #071D2F;
+  --ga-popular-text: #DCEBF7;
+
+  /* ---- Bordes ---- */
+  --ga-border: rgba(255, 255, 255, 0.08);
+  --ga-border-strong: #404040;
+  --ga-border-accent: rgba(15, 111, 196, 0.45);
+
+  /* ---- Estados ---- */
+  --ga-success: #22c55e;
+  --ga-warning: #f59e0b;
+  --ga-danger: #ef4444;
+  --ga-info: #3b82f6;
+
+  /* ---- Radios · escala medida ---- */
+  --ga-radius-xs: 2px;
+  --ga-radius-sm: 8px;
+  --ga-radius-md: 10px;
+  --ga-radius-tile: 12px;
+  --ga-radius-lg: 16px;
+  --ga-radius-card: 20px;
+  --ga-radius-xl: 28px;      /* panel / widget */
+  --ga-radius-2xl: 32px;
+  --ga-radius-pill: 999px;
+
+  /* ---- Sombras y brillos ---- */
+  --ga-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --ga-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --ga-shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.55);
+  --ga-glow-sm: 0 0 24px rgba(15, 111, 196, 0.28);
+  --ga-glow-md: 0 0 48px rgba(15, 111, 196, 0.32);
+  --ga-glow-lg: 0 0 96px rgba(15, 111, 196, 0.35);
+
+  /* ---- Degradados ---- */
+  --ga-gradient-accent: linear-gradient(135deg, #13C1DF 0%, #0F6FC4 45%, #084F85 100%);
+  --ga-gradient-card: radial-gradient(120% 140% at 50% 0%, rgba(15, 111, 196, 0.22) 0%, rgba(14, 0, 44, 0.28) 55%, rgba(24, 24, 24, 0) 100%);
+  --ga-gradient-hero: radial-gradient(60% 45% at 50% 100%, rgba(15, 111, 196, 0.35) 0%, rgba(15, 111, 196, 0) 70%);
+
+  /* ---- Foco ---- */
+  --ga-focus-ring: 0 0 0 3px rgba(15, 111, 196, 0.38);
+
+  /* ---- CTA oscuro (widget en tema claro) ---- */
+  --ga-cta-dark: #101010;
+  --ga-cta-dark-hover: #262626;
+}
+
+[data-theme='oscuro'] {
+  /* ---- Superficies · tema claro (medidas) ---- */
+  --ga-bg: #f5f5f5;
+  --ga-bg-soft: #eeeeef;
+  --ga-surface: #ffffff;
+  --ga-surface-2: #f5f5f5;
+  --ga-surface-3: #f1f1f1;
+  --ga-surface-raised: #f5f5f5;
+  --ga-surface-overlay: #e7e7ea;
+  --ga-input-bg: #f1f1f1;
+  --ga-overlay: #f0ebff;
+  --ga-ink: #101010;
+  --ga-ink-2: #27272a;
+  --ga-muted: #404040;
+  --ga-faint: #71717a;
+  --ga-label: #404040;
+
+  /* ---- Paneles del widget · claro ---- */
+  --ga-panel-bg: #ffffff;
+  --ga-row-bg: #f4f4f5;
+  --ga-check-bg: var(--ga-accent);
+  --ga-check-ink: #ffffff;
+
+  /* ---- Tarjetas de contenido · claro ---- */
+  --ga-card-tint: rgba(15, 111, 196, 0.07);
+  --ga-card-neutral: rgba(16, 16, 16, 0.04);
+  --ga-surface-btn: rgba(16, 16, 16, 0.05);
+
+  /* ---- Insignia "popular" · claro ---- */
+  --ga-popular-bg: #e6ecfc;
+  --ga-popular-text: #0846e3;
+
+  /* ---- Bordes ---- */
+  --ga-border: #e4e4e7;
+  --ga-border-strong: #c5c5c5;
+
+  /* ---- Sombras (claras) ---- */
+  --ga-shadow-sm: 0 1px 2px rgba(10, 10, 12, 0.06);
+  --ga-shadow-md: 0 8px 24px rgba(10, 10, 12, 0.08);
+  --ga-shadow-lg: 0 24px 64px rgba(10, 10, 12, 0.12);
+  --ga-glow-sm: 0 0 24px rgba(15, 111, 196, 0.18);
+  --ga-glow-md: 0 0 48px rgba(15, 111, 196, 0.2);
+  --ga-glow-lg: 0 0 96px rgba(15, 111, 196, 0.22);
+
+  --ga-gradient-card: radial-gradient(120% 140% at 50% 0%, rgba(15, 111, 196, 0.08) 0%, rgba(19, 193, 223, 0.20) 60%, rgba(255, 255, 255, 0) 100%);
+  --ga-gradient-hero: radial-gradient(60% 45% at 50% 100%, rgba(15, 111, 196, 0.16) 0%, rgba(15, 111, 196, 0) 70%);
+}
+
+/* ---- Overrides Gran Azul (marca, sin violeta) ---- */
+:root,
+[data-theme='claro'] {
+  --ga-bg: #FFFFFF;
+  --ga-bg-soft: #F4F8FB;
+  --ga-surface: #FFFFFF;
+  --ga-surface-2: #F4F8FB;
+  --ga-surface-3: #EAF3FC;
+  --ga-surface-raised: #F4F8FB;
+  --ga-surface-overlay: #EAF3FC;
+  --ga-input-bg: #FFFFFF;
+  --ga-overlay: rgba(7, 29, 47, 0.55);
+  --ga-ink: #071D2F;
+  --ga-ink-2: #0A2A45;
+  --ga-muted: #3D5A73;
+  --ga-faint: #5A7488;
+  --ga-label: #5A7488;
+  --ga-brand: #0075A7;
+  --ga-brand-deep: #071D2F;
+  --ga-on-brand: #FFFFFF;
+  --ga-accent: #0F6FC4;
+  --ga-accent-hover: #0A5E9E;
+  --ga-accent-active: #084F85;
+  --ga-accent-deep: #071D2F;
+  --ga-accent-mid: #0F6FC4;
+  --ga-accent-bright: #0075A7;
+  --ga-accent-soft: rgba(0, 117, 167, 0.10);
+  --ga-accent-softer: rgba(0, 117, 167, 0.06);
+  --ga-accent-pale: #EAF3FC;
+  --ga-accent-tint: #DCEBF7;
+  --ga-cyan: #13C1DF;
+  --ga-border: #DDE5EA;
+  --ga-border-strong: #C2D6EC;
+  --ga-border-accent: rgba(15, 111, 196, 0.45);
+  --ga-panel-bg: #FFFFFF;
+  --ga-row-bg: #F4F8FB;
+  --ga-card-tint: rgba(0, 117, 167, 0.08);
+  --ga-popular-bg: #071D2F;
+  --ga-popular-text: #DCEBF7;
+  --ga-cta-dark: #071D2F;
+  --ga-cta-dark-hover: #0A2A45;
+  --ga-focus-ring: 0 0 0 3px rgba(15, 111, 196, 0.35);
+  --ga-gradient-accent: linear-gradient(135deg, #13C1DF 0%, #0F6FC4 55%, #0075A7 100%);
+  --ga-gradient-feature: radial-gradient(130% 150% at 18% -10%, #13C1DF 0%, #0F6FC4 38%, #0075A7 78%, #071D2F 100%);
+  --ga-gradient-card: radial-gradient(120% 140% at 50% 0%, rgba(0, 117, 167, 0.14) 0%, rgba(7, 29, 47, 0.06) 55%, rgba(255, 255, 255, 0) 100%);
+  --ga-gradient-hero: radial-gradient(60% 45% at 50% 100%, rgba(0, 117, 167, 0.20) 0%, rgba(0, 117, 167, 0) 70%);
+  --ga-glow-sm: 0 0 24px rgba(0, 117, 167, 0.18);
+  --ga-glow-md: 0 0 48px rgba(0, 117, 167, 0.20);
+  --ga-glow-lg: 0 0 96px rgba(0, 117, 167, 0.22);
+  --ga-text-display: 48px;
+  --ga-text-h2: 28px;
+  --ga-text-h3: 24px;
+  --ga-text-h4: 20px;
+  --ga-leading-body: 1.5;
+}
+[data-theme='oscuro'] {
+  /* Fondo oscuro propio, inspirado en la dirección casi-negra azul noche
+     vista como referencia, pero con valores derivados de nuestro noche
+     #071D2F, NO copiados de la referencia. */
+  --ga-bg: #060F1A;
+  --ga-bg-soft: #0A1826;
+  --ga-surface: #0B1B2E;
+  --ga-surface-2: #12263D;
+  --ga-surface-3: #162E47;
+  --ga-surface-raised: #0B1B2E;
+  --ga-surface-overlay: #162E47;
+  --ga-input-bg: #0B1B2E;
+  --ga-overlay: rgba(3, 12, 26, 0.65);
+  --ga-ink: #FFFFFF;
+  --ga-ink-2: #EAF3FC;
+  --ga-muted: #CFE2EE;
+  --ga-faint: #7A93A8;
+  --ga-label: #A8C2D4;
+  --ga-brand: #13C1DF;
+  --ga-brand-deep: #071D2F;
+  --ga-on-brand: #071D2F;
+  --ga-on-accent: #FFFFFF;
+  /* Acento principal en oscuro: azul oscuro propio (blanco sobre él 6,81:1). */
+  --ga-accent: #1E5AA8;
+  --ga-accent-hover: #2A6FCE;
+  --ga-accent-active: #0F6FC4;
+  --ga-accent-deep: #8FC3EC;
+  --ga-accent-mid: #1E5AA8;
+  --ga-accent-bright: #13C1DF;
+  --ga-accent-soft: rgba(30, 90, 168, 0.28);
+  --ga-accent-softer: rgba(30, 90, 168, 0.16);
+  --ga-accent-pale: #0B1B2E;
+  --ga-accent-tint: #162E47;
+  --ga-cyan: #13C1DF;
+  --ga-border: #1E3D5E;
+  --ga-border-strong: #2A4E73;
+  --ga-border-accent: rgba(30, 90, 168, 0.55);
+  --ga-panel-bg: #060F1A;
+  --ga-row-bg: #0B1B2E;
+  --ga-card-tint: rgba(30, 90, 168, 0.18);
+  --ga-popular-bg: #13C1DF;
+  --ga-popular-text: #071D2F;
+  --ga-cta-dark: #13C1DF;
+  --ga-cta-dark-hover: #0F6FC4;
+  --ga-focus-ring: 0 0 0 3px rgba(30, 90, 168, 0.50);
+}
+
+/* Alias de compatibilidad: la variante 'lavender' usa ahora azul pálido, no violeta. */
+:root,
+[data-theme='claro'] { --ga-lavender: #DCEBF7; --ga-lavender-ink: #071D2F; }
+[data-theme='oscuro'] { --ga-lavender: #143452; --ga-lavender-ink: #FFFFFF; }

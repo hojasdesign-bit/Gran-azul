@@ -1,0 +1,74 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ga-space-1);
+  width: 100%;
+  font-family: var(--ga-font-sans);
+}
+
+.label {
+  font-size: var(--ga-text-caption);
+  font-weight: 600;
+  color: var(--ga-ink-2);
+  letter-spacing: 0.01em;
+}
+
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 12px 44px 12px var(--ga-space-4);
+  background: var(--ga-input-bg);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body);
+  cursor: pointer;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--ga-accent);
+  box-shadow: var(--ga-focus-ring);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Las opciones nativas heredan el tema del SO; se fuerza fondo legible */
+.select option {
+  background: var(--ga-surface);
+  color: var(--ga-ink);
+}
+
+.chevron {
+  position: absolute;
+  right: var(--ga-space-4);
+  color: var(--ga-muted);
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.hasError { border-color: var(--ga-danger); }
+.hasError:focus { border-color: var(--ga-danger); box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25); }
+
+.hint, .error {
+  margin: 0;
+  font-size: var(--ga-text-caption);
+  line-height: 1.45;
+}
+
+.hint { color: var(--ga-faint); }
+.error { color: var(--ga-danger); }

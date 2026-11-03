@@ -1,0 +1,16 @@
+.root { background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: var(--ga-space-6); color: var(--ga-ink); font-family: var(--ga-font-sans); display: flex; flex-direction: column; gap: var(--ga-space-3); }
+.featured { background: var(--ga-brand-deep); color: #fff; border-color: rgba(255, 255, 255, 0.16); }
+
+/* En oscuro el fondo noche era el mismo que el de la página y la tarjeta
+   se fundía con ella: fondo un tono más claro y borde visible. */
+:global([data-theme="oscuro"]) .featured { background: var(--ga-surface-2); border-color: var(--ga-border-strong); }
+.featured .description, .featured .item { color: #CFE2EE; }
+.number { display: inline-flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 8px; background: var(--ga-accent-soft); color: var(--ga-brand); font-weight: 700; font-size: var(--ga-text-body-sm); }
+.featured .number { background: rgba(255,255,255,0.15); color: #fff; }
+.title { margin: 0; font-size: var(--ga-text-h3); line-height: var(--ga-leading-heading); color: inherit; /* gana al color tinta global de base.css; en destacada hereda blanco */ }
+.description { margin: 0; color: var(--ga-muted); font-size: var(--ga-text-body); line-height: var(--ga-leading-body); }
+.list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--ga-space-2); }
+.item { display: flex; gap: var(--ga-space-2); font-size: var(--ga-text-body-sm); color: var(--ga-muted); }
+.check { color: var(--ga-cyan); font-weight: 700; }
+.cta { margin-top: auto; align-self: flex-start; border: 0; border-radius: var(--ga-radius-md); padding: 12px 18px; background: var(--ga-accent); color: #fff; font-weight: 700; cursor: pointer; }
+.featured .cta { background: #fff; color: var(--ga-brand-deep); }

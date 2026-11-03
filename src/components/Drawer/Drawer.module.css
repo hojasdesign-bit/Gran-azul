@@ -1,0 +1,94 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(6, 6, 8, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: ga-drawer-fade 0.2s ease;
+}
+
+.panel {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background: var(--ga-surface);
+  border: 1px solid var(--ga-border);
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  box-shadow: var(--ga-shadow-lg);
+}
+.panel:focus { outline: none; }
+
+/* ---- Posiciones ---- */
+.right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(420px, 94vw);
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  animation: ga-drawer-in-right 0.3s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.bottom {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 82vh;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: var(--ga-radius-xl) var(--ga-radius-xl) 0 0;
+  animation: ga-drawer-in-bottom 0.3s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ga-space-4);
+  padding: var(--ga-space-5) var(--ga-space-6) var(--ga-space-2);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--ga-text-h4);
+  font-weight: 700;
+  letter-spacing: var(--ga-tracking-tight);
+  color: var(--ga-ink);
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ga-muted);
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.close:hover { background: var(--ga-accent-softer); color: var(--ga-ink); }
+.close:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+
+.body {
+  padding: var(--ga-space-4) var(--ga-space-6) var(--ga-space-6);
+  overflow-y: auto;
+  font-size: var(--ga-text-body);
+  line-height: 1.6;
+  color: var(--ga-ink-2);
+}
+
+@keyframes ga-drawer-fade { from { opacity: 0; } }
+@keyframes ga-drawer-in-right { from { transform: translateX(100%); } }
+@keyframes ga-drawer-in-bottom { from { transform: translateY(100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay, .panel { animation: none; }
+}

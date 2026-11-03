@@ -1,0 +1,28 @@
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ga-space-3);
+  padding: var(--ga-space-4);
+  background: var(--ga-accent-softer);
+  border: 1px solid var(--ga-border-accent);
+  border-radius: var(--ga-radius-lg);
+  font-family: var(--ga-font-sans);
+}
+
+.icon { flex-shrink: 0; margin-top: 2px; color: var(--ga-accent-hover); }
+
+.texts { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+
+.title {
+  font-size: var(--ga-text-body-sm);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ga-ink);
+}
+
+.text {
+  margin: 0;
+  font-size: var(--ga-text-body-sm);
+  line-height: 1.6;
+  color: var(--ga-muted);
+}

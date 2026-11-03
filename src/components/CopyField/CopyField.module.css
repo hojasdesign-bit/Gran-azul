@@ -1,0 +1,58 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ga-space-2);
+  width: 100%;
+  font-family: var(--ga-font-sans);
+}
+
+.label {
+  font-size: var(--ga-text-body-sm);
+  font-weight: 500;
+  color: var(--ga-label);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: var(--ga-space-3);
+  padding: var(--ga-space-2) var(--ga-space-2) var(--ga-space-2) var(--ga-space-4);
+  background: var(--ga-input-bg);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+}
+
+.value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--ga-text-body-sm);
+  font-weight: 500;
+  color: var(--ga-ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 var(--ga-space-3);
+  background: var(--ga-accent-soft);
+  border: 0;
+  border-radius: var(--ga-radius-tile);
+  color: var(--ga-accent-hover);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover { background: var(--ga-accent-soft-hover, var(--ga-accent-soft)); }
+.btn:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+
+.copied { background: var(--ga-success); color: #ffffff; }

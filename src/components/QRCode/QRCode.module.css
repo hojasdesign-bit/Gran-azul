@@ -1,0 +1,28 @@
+.figure {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ga-space-3);
+  margin: 0;
+  font-family: var(--ga-font-sans);
+}
+.framed {
+  padding: var(--ga-space-5);
+  background: #ffffff;
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  box-shadow: var(--ga-shadow-sm);
+}
+.canvas { display: block; border-radius: var(--ga-radius-sm); }
+.label { font-size: var(--ga-text-body-sm); font-weight: 700; color: #101010; text-align: center; }
+.value {
+  max-width: 260px;
+  font-family: var(--ga-font-mono);
+  font-size: var(--ga-text-micro);
+  line-height: 1.5;
+  color: #52525b;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.figure:not(.framed) .label { color: var(--ga-ink); }
+.figure:not(.framed) .value { color: var(--ga-muted); }

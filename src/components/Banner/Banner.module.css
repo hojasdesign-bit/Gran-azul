@@ -1,0 +1,90 @@
+/* Banner — franja a ancho completo: tinte de variante + barra lateral
+   de acento, sin borde perimetral ni radio (eso es Alert). */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: var(--ga-space-3);
+  width: 100%;
+  padding: var(--ga-space-3) var(--ga-space-4);
+  border-left: 4px solid;
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  line-height: 1.5;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0 0 2px;
+  font-weight: 700;
+  font-size: var(--ga-text-body-sm);
+  color: var(--ga-ink);
+}
+
+.text {
+  margin: 0;
+  color: var(--ga-ink-2);
+}
+.text p { margin: 0; }
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ga-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.close:hover {
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  color: var(--ga-ink);
+}
+.close:focus-visible {
+  outline: none;
+  box-shadow: var(--ga-focus-ring);
+}
+
+/* ---- Variantes ---- */
+.info {
+  background: color-mix(in srgb, var(--ga-info) 10%, transparent);
+  border-left-color: var(--ga-info);
+}
+.info .icon { color: var(--ga-info); }
+
+.success {
+  background: color-mix(in srgb, var(--ga-success) 10%, transparent);
+  border-left-color: var(--ga-success);
+}
+.success .icon { color: var(--ga-success); }
+
+.warning {
+  background: color-mix(in srgb, var(--ga-warning) 10%, transparent);
+  border-left-color: var(--ga-warning);
+}
+.warning .icon { color: var(--ga-warning); }
+
+.danger {
+  background: color-mix(in srgb, var(--ga-danger) 10%, transparent);
+  border-left-color: var(--ga-danger);
+}
+.danger .icon { color: var(--ga-danger); }

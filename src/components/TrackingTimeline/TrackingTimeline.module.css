@@ -1,0 +1,7 @@
+.root { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--ga-space-2); color: var(--ga-ink); font-family: var(--ga-font-sans); }
+.step { display: grid; gap: var(--ga-space-2); justify-items: center; text-align: center; color: var(--ga-muted); }
+.dot { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--ga-surface-2); border: 1px solid var(--ga-border); font-weight: 700; }
+.done, .current { color: var(--ga-ink); }
+.done .dot { background: var(--ga-brand); color: var(--ga-on-brand); border-color: var(--ga-brand); }
+.current .dot { background: var(--ga-cyan); color: var(--ga-brand-deep); border-color: var(--ga-cyan); }
+.label { font-size: var(--ga-text-body-sm); font-weight: 600; }

@@ -1,0 +1,47 @@
+/* MenuItem — fila transparente sobre el fondo del panel, alto ~52 */
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--ga-space-4);
+  width: 100%;
+  min-height: 52px;
+  padding: var(--ga-space-2) var(--ga-space-1);
+  background: transparent;
+  border: 0;
+  border-radius: var(--ga-radius-tile);
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.item:hover { background: var(--ga-accent-softer); }
+.item:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ga-ink-2);
+}
+
+.label {
+  flex: 1;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.trailing {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  color: var(--ga-faint);
+}
+
+.danger { color: var(--ga-danger, var(--ga-ink)); }

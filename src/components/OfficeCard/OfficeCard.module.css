@@ -1,0 +1,5 @@
+.root { background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: var(--ga-space-6); color: var(--ga-ink); font-family: var(--ga-font-sans); display: grid; gap: var(--ga-space-2); }
+.pin { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--ga-accent-soft); color: var(--ga-brand); font-size: 20px; }
+.city { margin: 0; font-size: var(--ga-text-h4); }
+.note { margin: 0; color: var(--ga-muted); font-size: var(--ga-text-body-sm); line-height: var(--ga-leading-body); }
+.cta { justify-self: start; border: 0; background: transparent; color: var(--ga-accent); font-weight: 700; cursor: pointer; padding: 0; }

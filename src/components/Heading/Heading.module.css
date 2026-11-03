@@ -1,0 +1,15 @@
+.root {
+  margin: 0;
+  font-family: var(--ga-font-sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--ga-ink);
+}
+.displayXl { font-size: var(--ga-text-display-xl); line-height: 1.15; }
+.display { font-size: var(--ga-text-display); line-height: 1.2; }
+.h1 { font-size: var(--ga-text-h1); line-height: 1.25; }
+.h2 { font-size: var(--ga-text-h2); line-height: 1.25; }
+.h3 { font-size: var(--ga-text-h3); line-height: 1.1; }
+.h4 { font-size: var(--ga-text-h4); line-height: 1.3; }
+.toneMuted { color: var(--ga-muted); }
+.toneAccent { color: var(--ga-accent); }

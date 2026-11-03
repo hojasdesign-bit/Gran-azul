@@ -1,0 +1,92 @@
+.root {
+  width: 100%;
+  font-family: var(--ga-font-sans);
+}
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  color: var(--ga-ink-2);
+}
+
+/* La pieza unida: un solo borde y un solo fondo para los dos campos */
+.joint {
+  display: flex;
+  align-items: stretch;
+  background: var(--ga-input-bg);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  transition: border-color 0.15s ease;
+}
+.joint:focus-within { border-color: var(--ga-accent); box-shadow: var(--ga-focus-ring); }
+.joint.hasError { border-color: var(--ga-danger); }
+
+.firstWrap { position: relative; flex: 1.25; min-width: 0; }
+.input {
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  background: transparent;
+  border: 0;
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+}
+.input::placeholder { color: var(--ga-faint); font-weight: 500; }
+.input:focus { outline: none; }
+
+.divider { width: 1px; background: var(--ga-border); flex: none; }
+
+.selectWrap { position: relative; flex: 1; min-width: 0; }
+.select {
+  width: 100%;
+  height: 100%;
+  min-height: 48px;
+  padding: 12px 36px 12px 14px;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+.select:focus { outline: none; }
+.select:disabled { color: var(--ga-faint); cursor: not-allowed; }
+.chevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ga-muted);
+  pointer-events: none;
+}
+
+/* Fixed en vez de absoluto (ver el JSX): el absoluto quedaba
+   recortado por el overflow de la fila que lo contiene.
+   top/left/width los pone el JSX desde el rect del campo. */
+.panel {
+  position: fixed;
+  z-index: 40;
+  min-width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: var(--ga-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--ga-panel-bg);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  box-shadow: var(--ga-shadow-lg);
+}
+.highlighted { border-color: var(--ga-border-strong); }
+
+.error { margin: 6px 0 0; font-size: var(--ga-text-caption); color: var(--ga-danger); }
+.hint { margin: 6px 0 0; font-size: var(--ga-text-caption); color: var(--ga-faint); }

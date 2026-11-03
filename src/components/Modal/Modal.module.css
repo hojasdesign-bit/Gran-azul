@@ -1,0 +1,124 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ga-space-4);
+  background: rgba(6, 6, 8, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: ga-modal-fade 0.2s ease;
+}
+
+.panel {
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--ga-surface);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  box-shadow: var(--ga-shadow-lg);
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  animation: ga-modal-pop 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.15);
+}
+.panel:focus { outline: none; }
+
+/* ---- Tamaños ---- */
+.sm { max-width: 380px; }
+.md { max-width: 520px; }
+.lg { max-width: 720px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ga-space-4);
+  padding: var(--ga-space-5) var(--ga-space-6) var(--ga-space-2);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--ga-text-h4);
+  font-weight: 700;
+  letter-spacing: var(--ga-tracking-tight);
+  color: var(--ga-ink);
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ga-muted);
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.close:hover { background: var(--ga-accent-softer); color: var(--ga-ink); }
+.close:focus-visible { outline: none; box-shadow: var(--ga-focus-ring); }
+
+.body {
+  padding: var(--ga-space-4) var(--ga-space-6);
+  overflow-y: auto;
+  font-size: var(--ga-text-body);
+  line-height: 1.6;
+  color: var(--ga-ink-2);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--ga-space-3);
+  padding: var(--ga-space-4) var(--ga-space-6) var(--ga-space-5);
+  border-top: 1px solid var(--ga-border);
+}
+
+@keyframes ga-modal-fade { from { opacity: 0; } }
+@keyframes ga-modal-pop {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+}
+
+/* Móvil (≤768px, como las tarjetas): el panel deja de ser una ventana
+   centrada y pasa a ser un modal inferior (bottom sheet): pegado abajo,
+   ancho completo, radio superior 24, agarre y subida animada. Solo CSS:
+   el comportamiento (Escape, clic fuera, foco, bloqueo de scroll) no cambia. */
+@media (max-width: 768px) {
+  .overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .panel {
+    max-width: none;
+    max-height: 85vh;
+    border-radius: 24px 24px 0 0;
+    border-bottom: 0;
+    animation: ga-modal-sheet-up 0.25s ease;
+  }
+  .panel::before {
+    content: "";
+    width: 40px;
+    height: 4px;
+    flex: none;
+    align-self: center;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background: var(--ga-border-strong);
+  }
+}
+
+@keyframes ga-modal-sheet-up {
+  from { opacity: 0; transform: translateY(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay, .panel { animation: none; }
+}

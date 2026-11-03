@@ -1,0 +1,63 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ga-space-1);
+  border: 1px solid transparent;
+  border-radius: var(--ga-radius-pill);
+  font-family: var(--ga-font-sans);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+/* ---- Tamaños ---- */
+.sm {
+  padding: 3px 9px;
+  font-size: var(--ga-text-micro);
+}
+.md {
+  padding: 4px 12px;
+  font-size: var(--ga-text-caption);
+}
+
+/* ---- Variantes ---- */
+.lavender {
+  background: var(--ga-lavender);
+  color: var(--ga-lavender-ink);
+}
+
+.accent {
+  background: var(--ga-accent);
+  color: var(--ga-on-accent);
+}
+
+.success {
+  background: color-mix(in srgb, var(--ga-success) 15%, transparent);
+  color: var(--ga-success);
+  border-color: color-mix(in srgb, var(--ga-success) 30%, transparent);
+}
+
+.warning {
+  background: color-mix(in srgb, var(--ga-warning) 15%, transparent);
+  color: var(--ga-warning);
+  border-color: color-mix(in srgb, var(--ga-warning) 30%, transparent);
+}
+
+.danger {
+  background: color-mix(in srgb, var(--ga-danger) 15%, transparent);
+  color: var(--ga-danger);
+  border-color: color-mix(in srgb, var(--ga-danger) 30%, transparent);
+}
+
+.neutral {
+  background: var(--ga-surface-3);
+  color: var(--ga-muted);
+  border-color: var(--ga-border-strong);
+}
+
+.dark {
+  background: var(--ga-cta-dark);
+  color: var(--ga-on-accent);
+}

@@ -1,0 +1,45 @@
+.wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ga-space-2);
+  font-family: var(--ga-font-sans);
+}
+
+.ring { position: relative; display: inline-block; }
+
+.track {
+  fill: none;
+  stroke: var(--ga-surface-overlay);
+  stroke-width: 5;
+}
+
+.arc {
+  fill: none;
+  stroke: var(--ga-accent);
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+.urgent { stroke: var(--ga-danger); }
+
+.time {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ga-ink);
+}
+
+.urgentText { color: var(--ga-danger); }
+
+.label {
+  font-size: var(--ga-text-caption);
+  font-weight: 500;
+  color: var(--ga-muted);
+  text-align: center;
+}

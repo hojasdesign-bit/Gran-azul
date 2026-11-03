@@ -1,0 +1,26 @@
+{
+  "name": "gran-azul",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Gran Azul \u00b7 Sitio de muestra con el sistema de dise\u00f1o Gran Azul (solo para ver, no es el sitio comercial final)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hugeicons/core-free-icons": "^4.4.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.6.2",
+    "@storybook/addon-themes": "^10.6.2",
+    "@storybook/react-vite": "^10.6.2",
+    "@vitejs/plugin-react": "^6.1.2",
+    "storybook": "^10.6.2",
+    "vite": "^8.3.4"
+  }
+}

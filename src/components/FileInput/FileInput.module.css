@@ -1,0 +1,120 @@
+.wrap {
+  width: 100%;
+  font-family: var(--ga-font-sans);
+}
+
+.hidden {
+  display: none;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ga-space-3);
+  padding: var(--ga-space-6);
+  border: 1px dashed var(--ga-border-strong);
+  border-radius: var(--ga-radius-card);
+  background: var(--ga-surface);
+  color: var(--ga-ink-2);
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  border-color: var(--ga-border-accent);
+}
+
+.dragging {
+  border-color: var(--ga-accent);
+  border-style: solid;
+  background: var(--ga-accent-soft);
+}
+
+.error {
+  border-color: var(--ga-danger);
+}
+
+.icon {
+  color: var(--ga-faint);
+}
+
+.label {
+  margin: 0;
+  font-size: var(--ga-text-body-sm);
+}
+
+.button {
+  padding: var(--ga-space-2) var(--ga-space-4);
+  border: 0;
+  border-radius: var(--ga-radius-pill);
+  background: var(--ga-surface-3);
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--ga-surface-overlay);
+}
+
+.accept {
+  margin: 0;
+  color: var(--ga-faint);
+  font-size: var(--ga-text-caption);
+}
+
+.list {
+  margin: var(--ga-space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: var(--ga-space-3);
+  padding: var(--ga-space-3) 0;
+  border-top: 1px solid var(--ga-border);
+  color: var(--ga-ink-2);
+  font-size: var(--ga-text-body-sm);
+}
+
+.name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.size {
+  flex-shrink: 0;
+  color: var(--ga-faint);
+  font-size: var(--ga-text-caption);
+}
+
+.remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: var(--ga-radius-pill);
+  background: var(--ga-surface-3);
+  color: var(--ga-muted);
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: var(--ga-danger);
+}
+
+.errorText {
+  margin: var(--ga-space-2) 0 0;
+  color: var(--ga-danger);
+  font-size: var(--ga-text-caption);
+}

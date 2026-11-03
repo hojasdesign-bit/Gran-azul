@@ -1,0 +1,6 @@
+.root { background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: var(--ga-space-6); color: var(--ga-ink); font-family: var(--ga-font-sans); display: grid; gap: var(--ga-space-2); }
+.route { margin: 0; font-size: var(--ga-text-h4); font-weight: 700; }
+.meta { margin: 0; color: var(--ga-muted); font-size: var(--ga-text-body-sm); }
+.bottom { display: flex; justify-content: space-between; align-items: center; gap: var(--ga-space-3); margin-top: var(--ga-space-2); }
+.price { font-size: var(--ga-text-h3); font-weight: 700; color: var(--ga-brand); }
+.cta { border: 0; border-radius: var(--ga-radius-md); padding: 10px 16px; background: var(--ga-accent); color: #fff; font-weight: 700; cursor: pointer; }

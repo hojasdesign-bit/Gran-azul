@@ -1,0 +1,6 @@
+.root { background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: var(--ga-space-6); color: var(--ga-ink); font-family: var(--ga-font-sans); display: grid; gap: var(--ga-space-2); }
+.top { display: flex; justify-content: space-between; align-items: center; gap: var(--ga-space-3); }
+.code { font-weight: 700; }
+.status { background: var(--ga-accent-soft); color: var(--ga-brand); border-radius: var(--ga-radius-pill); padding: 4px 10px; font-size: var(--ga-text-caption); font-weight: 700; }
+.route { margin: 0; color: var(--ga-muted); }
+.date { margin: 0; color: var(--ga-faint); font-size: var(--ga-text-body-sm); }

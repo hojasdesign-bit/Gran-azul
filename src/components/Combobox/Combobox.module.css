@@ -1,0 +1,57 @@
+.root {
+  position: relative;
+  width: 100%;
+  font-family: var(--ga-font-sans);
+}
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  color: var(--ga-ink-2);
+}
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--ga-space-2);
+  width: 100%;
+  min-height: 50px;
+  padding: 10px 14px;
+  background: var(--ga-input-bg);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  color: var(--ga-ink);
+  font-family: var(--ga-font-sans);
+  font-size: var(--ga-text-body-sm);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+.trigger:hover:not(:disabled) { border-color: var(--ga-border-strong); }
+.trigger:focus-visible { outline: none; border-color: var(--ga-accent); box-shadow: var(--ga-focus-ring); }
+.trigger:disabled { opacity: 0.5; cursor: not-allowed; }
+.trigger.open { border-color: var(--ga-accent); }
+.trigger.hasError { border-color: var(--ga-danger); }
+.triggerIcon { display: inline-flex; flex: none; }
+.triggerLabel { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.placeholder { color: var(--ga-faint); font-weight: 500; }
+.chevron { flex: none; color: var(--ga-muted); }
+.panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding: var(--ga-space-3);
+  background: var(--ga-panel-bg);
+  border: 1px solid var(--ga-border);
+  border-radius: var(--ga-radius-lg);
+  box-shadow: var(--ga-shadow-lg);
+}
+.panelHead { display: flex; flex-direction: column; gap: var(--ga-space-3); margin-bottom: var(--ga-space-2); }
+.panelTitle { font-size: var(--ga-text-body); font-weight: 700; color: var(--ga-ink); }
+.list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; max-height: 300px; overflow-y: auto; }
+.empty { padding: 14px; text-align: center; color: var(--ga-faint); font-size: var(--ga-text-body-sm); }
+.error { margin: 6px 0 0; font-size: var(--ga-text-caption); color: var(--ga-danger); }
+.hint { margin: 6px 0 0; font-size: var(--ga-text-caption); color: var(--ga-faint); }

@@ -1,0 +1,48 @@
+.dot {
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: var(--ga-radius-pill);
+}
+
+.sm {
+  width: 8px;
+  height: 8px;
+}
+
+.md {
+  width: 12px;
+  height: 12px;
+}
+
+.online {
+  background: var(--ga-success);
+}
+
+.live {
+  background: var(--ga-accent);
+  animation: ga-statusdot-pulse 1.8s ease-out infinite;
+}
+
+.busy {
+  background: var(--ga-warning);
+}
+
+.offline {
+  background: var(--ga-faint);
+}
+
+.danger {
+  background: var(--ga-danger);
+}
+
+@keyframes ga-statusdot-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ga-accent) 45%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 6px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
