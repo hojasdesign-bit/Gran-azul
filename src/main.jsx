@@ -8,7 +8,7 @@ import { Button } from './components/Button/Button.jsx';
 import { CTABanner } from './components/CTABanner/CTABanner.jsx';
 import { FeaturedDestinations } from './components/FeaturedDestinations/FeaturedDestinations.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
-import { HeroPanel } from './components/HeroPanel/HeroPanel.jsx';
+import { Icon } from './components/Icon/Icon.jsx';
 import { OfficeCard } from './components/OfficeCard/OfficeCard.jsx';
 import { QuoteOptions } from './components/QuoteOptions/QuoteOptions.jsx';
 import { SectionHeading } from './components/SectionHeading/SectionHeading.jsx';
@@ -44,7 +44,7 @@ const STATUS_ITEMS = [
 function money(n) { return `${n} USD`; }
 
 function App() {
-  const [theme, setTheme] = useState('claro');
+  const [theme, setTheme] = useState('oscuro');
   const [view, setView] = useState('home');
   const [tracked, setTracked] = useState(null);
   const [cart, setCart] = useState([]);
@@ -120,13 +120,26 @@ function App() {
       <main>
         {view === 'home' && (
           <>
-            <HeroPanel>
-              <p className="ga-site-eyebrow">Familias sin fronteras</p>
-              <h1>Más cerca de Cuba, estés donde estés</h1>
-              <p className="ga-site-hero-text">Envíos, compras, viajes y trámites legales, con la confianza de un equipo que te acompaña.</p>
-              <TrackingSearch onSearch={(code) => { setTracked(code); go('orders'); }} />
-              <p className="ga-site-trust">Seguro y confiable · Miles de familias ya confían en nosotros · Más de 15 oficinas en EE. UU.</p>
-            </HeroPanel>
+            <section className="ga-hero">
+              <div className="ga-hero-copy">
+                <p className="ga-site-eyebrow">Familias sin fronteras</p>
+                <h1>Más cerca de Cuba, estés donde estés</h1>
+                <p className="ga-site-hero-text">Envíos, compras, viajes y trámites legales, con la confianza de un equipo que te acompaña.</p>
+                <TrackingSearch onSearch={(code) => { setTracked(code); go('orders'); }} />
+                <p className="ga-site-trust">Seguro y confiable · Miles de familias ya confían en nosotros · Más de 15 oficinas en EE. UU.</p>
+              </div>
+              <div className="ga-hero-visual" aria-hidden="true">
+                <div className="ga-hero-visual-icon"><Icon name="airplane" size={56} /></div>
+                <p className="ga-hero-visual-title">Tu envío en camino</p>
+                <p className="ga-hero-visual-route">Miami → La Habana</p>
+                <div className="ga-hero-visual-bar"><span /></div>
+                <div className="ga-hero-visual-stats">
+                  <div><strong>3</strong><span>Métodos</span></div>
+                  <div><strong>15+</strong><span>Oficinas</span></div>
+                  <div><strong>24h</strong><span>Procesado</span></div>
+                </div>
+              </div>
+            </section>
             {tracked && (
               <section className="ga-site-section" aria-label="Resultado del rastreo">
                 <div className="ga-site-track-result">
@@ -213,16 +226,21 @@ function App() {
             {filtered.length === 0 && <p className="ga-site-card-meta">Sin productos para esa búsqueda.</p>}
             <div className="ga-site-grid">
               {filtered.map((p) => (
-                <article key={p.id} className="ga-site-card">
-                  <div className="ga-site-card-cover" aria-hidden="true">{p.name.slice(0, 1)}</div>
+                <article key={p.id} className="ga-site-card ga-shop-card">
+                  <div className="ga-shop-cover-wrap">
+                    <div className="ga-site-card-cover" aria-hidden="true">{p.name.slice(0, 1)}</div>
+                    <span className="ga-shop-discount">-{Math.round((1 - p.price / p.oldPrice) * 100)}%</span>
+                    <button type="button" className="ga-shop-fav" aria-label="Favorito" onClick={() => toggleFav(p.id)}>{favs.includes(p.id) ? '♥' : '♡'}</button>
+                  </div>
                   <span className="ga-site-badge">{p.category}</span>
                   <h3>{p.name}</h3>
-                  <p className="ga-site-card-meta">{storeName(p.store)} · {p.stock} · ★ {p.rating}</p>
+                  <p className="ga-site-card-meta">{storeName(p.store)} · ★ {p.rating}</p>
+                  <p className={p.stock === 'En stock' ? 'ga-shop-stock-ok' : 'ga-shop-stock-low'}>{p.stock}</p>
                   <p><s>{p.oldPrice} USD</s> <strong>{p.price} USD</strong></p>
+                  <p className="ga-site-card-meta">Ahorra {p.oldPrice - p.price} USD · Envío disponible</p>
                   <div className="ga-shop-card-actions">
-                    <Button onClick={() => addToCart(p.id)}>Añadir</Button>
+                    <Button fullWidth onClick={() => addToCart(p.id)}>Añadir al carrito</Button>
                     <Button variant="secondary" onClick={() => setDetail(p)}>Ver</Button>
-                    <button type="button" className="ga-shop-fav" aria-label="Favorito" onClick={() => toggleFav(p.id)}>{favs.includes(p.id) ? '♥' : '♡'}</button>
                   </div>
                 </article>
               ))}

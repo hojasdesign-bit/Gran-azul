@@ -1,5 +1,18 @@
 .ga-site { background: var(--ga-bg); color: var(--ga-ink); font-family: var(--ga-font-sans); min-height: 100vh; }
-.ga-site-header { display: flex; align-items: center; gap: 24px; padding: 20px 64px; flex-wrap: wrap; }
+.ga-site-header { position: sticky; top: 12px; z-index: 40; display: flex; align-items: center; gap: 24px; padding: 12px 24px; flex-wrap: wrap; max-width: 1200px; margin: 12px auto 0; background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: 999px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); }
+.ga-hero { max-width: 1200px; margin: 24px auto 0; padding: 48px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 48px; align-items: center; background: linear-gradient(135deg, #12263d, #071d2f); border: 1px solid var(--ga-border-accent); border-radius: 24px; color: #fff; }
+.ga-hero-copy { display: grid; gap: 16px; min-width: 0; }
+.ga-hero h1 { margin: 0; font-size: 56px; line-height: 1.05; color: #fff; }
+.ga-hero-visual { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 20px; padding: 32px; display: grid; gap: 12px; text-align: center; min-width: 0; }
+.ga-hero-visual-icon { color: #13c1df; display: flex; justify-content: center; }
+.ga-hero-visual-title { margin: 0; font-size: 20px; font-weight: 800; }
+.ga-hero-visual-route { margin: 0; color: #cfe2ee; }
+.ga-hero-visual-bar { height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.16); overflow: hidden; }
+.ga-hero-visual-bar span { display: block; width: 62%; height: 100%; background: #13c1df; border-radius: 999px; }
+.ga-hero-visual-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.ga-hero-visual-stats > div { display: grid; gap: 2px; }
+.ga-hero-visual-stats strong { font-size: 20px; }
+.ga-hero-visual-stats span { color: #cfe2ee; font-size: 13px; }
 .ga-site-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ga-ink); text-decoration: none; font-weight: 800; font-size: 20px; border: 0; background: transparent; cursor: pointer; padding: 0; font-family: var(--ga-font-sans); }
 .ga-site-brand span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
 .ga-site-nav { display: flex; gap: 8px; margin: 0 auto; flex-wrap: wrap; }
@@ -22,7 +35,9 @@
 @media (max-width: 900px) {
   .ga-site-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ga-site-two-col { grid-template-columns: 1fr; }
-  .ga-site-header { padding: 20px 24px; }
+  .ga-site-header { padding: 12px 20px; border-radius: 24px; margin-left: 16px; margin-right: 16px; }
+  .ga-hero { grid-template-columns: 1fr; padding: 32px 24px; margin-left: 16px; margin-right: 16px; }
+  .ga-hero h1 { font-size: 40px; }
 }
 .ga-site-card { background: var(--ga-surface); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: 20px; min-width: 0; display: grid; gap: 8px; align-content: start; }
 .ga-site-card h3 { margin: 0; }
@@ -49,6 +64,12 @@
 .ga-shop-filters button.ga-shop-filter-active { background: var(--ga-accent); border-color: var(--ga-accent); color: var(--ga-on-accent); }
 .ga-shop-card-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .ga-shop-fav { border: 0; background: transparent; color: var(--ga-accent); font-size: 22px; cursor: pointer; }
+.ga-shop-cover-wrap { position: relative; }
+.ga-shop-cover-wrap .ga-site-card-cover { height: 160px; }
+.ga-shop-discount { position: absolute; top: 12px; left: 12px; background: #e70505; color: #fff; font-size: 13px; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
+.ga-shop-cover-wrap .ga-shop-fav { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 0, 0, 0.35); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+.ga-shop-stock-ok { color: #22c55e !important; font-weight: 700; }
+.ga-shop-stock-low { color: #f59e0b !important; font-weight: 700; }
 .ga-modal-backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; padding: 24px; z-index: 50; }
 .ga-modal { background: var(--ga-surface); color: var(--ga-ink); border: 1px solid var(--ga-border); border-radius: var(--ga-radius-card); padding: 24px; max-width: 480px; width: 100%; display: grid; gap: 12px; }
 .ga-modal h2 { margin: 0; }
